@@ -1,9 +1,5 @@
-const greet = name => {
-    return "Hello, ${name}";
-}
-
-function newGreet(greet) {
-    console.log(greet);
-}
-
-newGreet(greet);
+const fs = require('fs');
+fs.readFile('file.txt', 'utf8', function (err, data) {
+ if (err) throw err;
+ console.log(data);
+})
